@@ -58,9 +58,9 @@
                 </td>
                 <td>
                     <div class="form-inline">
-                        <a href="{{ route('category.show', [$c->id]) }}" class="text-warning px-1"><i class="fa fa-info-circle"></i></a>
-                        <a href="{{ route('category.edit', [$c->id]) }}" class="text-primary px-1"><i class="fa fa-edit"></i></a>
-                        <form action="{{ route('category.destroy', [$c->id]) }}" method="POST">
+                        <a href="{{ url('category/detailTrash', [$c->id]) }}" class="text-info px-1"><i class="fa fa-info-circle"></i></a>
+                        <a href="{{ url('category/restoreTrash', [$c->id]) }}" class="text-warning px-1"><i class="fa fa-trash-restore"></i></a>
+                        <form action="{{ url('category/removeTrash', [$c->id]) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" value="delete" class="text-danger btn btn-link px-1"><i class="fa fa-trash"></i></button>
