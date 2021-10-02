@@ -11,6 +11,9 @@
 		<li>
 			<a href="/category"><span class="fas fa-list"></span>Category</a>
 		</li>
+		<li>
+			<a href="/book"><span class="fas fa-book"></span>Buku</a>
+		</li>
 		<div class="d-block d-md-none">
 			<div class="dropdown-divider"></div>
 			<li><a href="#">Profile</a></li>

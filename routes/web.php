@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Category;
+use App\Http\Controllers\Books;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,10 +31,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //user
 Route::resource('users', UserController::class);
 
-// category book
+// category
 Route::get('/category/trash', [Category::class, 'trash'])->name('trash');
 Route::get("category/detailTrash/{id}", [Category::class, "detailTrash"])->name('detailTrash');
 Route::delete('category/removeTrash/{id}', [Category::class, "removeTrash"])->name('removeTrash');
 Route::get('category/restoreTrash/{id}', [Category::class, "restoreTrash"])->name('restoreTrash');
-
 Route::resource('category', Category::class);
+
+// book
+Route::get('/ajax/category/search', [Books::class, "ajaxSearch"]);
+Route::resource('book', Books::class);

@@ -194,4 +194,9 @@ class Category extends Controller
         return redirect()->route('category.index')->with('status', 'Category successfully restored');
 
     }
+
+    
+
+
+
 }
